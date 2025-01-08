@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_file/db_file/db_file.dart';
 import 'package:my_file/pages/file_first/file_first_binding.dart';
+import 'package:my_file/pages/file_first/file_first_reset.dart';
 import 'package:my_file/pages/file_first/file_first_view.dart';
+import 'package:my_file/pages/file_night/file_night_binding.dart';
+import 'package:my_file/pages/file_night/file_night_view.dart';
 import 'package:my_file/pages/file_second/file_second_binding.dart';
 import 'package:my_file/pages/file_second/file_second_view.dart';
 import 'package:my_file/pages/file_tab/file_tab_binding.dart';
@@ -25,7 +28,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       getPages: Files,
-      initialRoute: '/fileTab',
+      initialRoute: '/',
       theme: ThemeData(
         useMaterial3: true,
         primaryColor: primaryColor,
@@ -78,7 +81,9 @@ class MyApp extends StatelessWidget {
 }
 
 List<GetPage<dynamic>> Files = [
+  GetPage(name: '/', page: () => const FileNightView(), binding: FileNightBinding()),
   GetPage(name: '/fileTab', page: () => FileTabPage(), binding: FileTabBinding()),
+  GetPage(name: '/fileSet', page: () => const FileFirstReset()),
   GetPage(name: '/fileFirst', page: () => FileFirstPage(), binding: FileFirstBinding()),
   GetPage(name: '/fileSecond', page: () => FileSecondPage(), binding: FileSecondBinding()),
 ];

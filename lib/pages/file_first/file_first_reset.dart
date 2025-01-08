@@ -24,7 +24,7 @@ class FileFirstReset extends GetView<PageLogic>{
         body: SafeArea(
           child: InAppWebView(
             initialUrlRequest: URLRequest(
-              url: WebUri.uri(Uri.parse(controller.potfk.value)),
+              url: WebUri.uri(Uri.parse(controller.ipkj.value)),
             ),
             onWebViewCreated: (c) {
               controller.webViewController = c;

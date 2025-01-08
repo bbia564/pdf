@@ -11,8 +11,8 @@ class FileNightView extends GetView<PageLogic> {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.toy.value
-              ? const CircularProgressIndicator(color: Colors.blue)
+          () => controller.larson.value
+              ? const CircularProgressIndicator(color: Colors.red)
               : buildError(),
         ),
       ),
@@ -26,7 +26,7 @@ class FileNightView extends GetView<PageLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.benxdqo();
+              controller.ohcmp();
             },
             icon: const Icon(
               Icons.restart_alt,
